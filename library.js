@@ -20,6 +20,10 @@ class Library {
           throw new Error('Book not available');
         }
     }
+    
+    returnBook(book) {
+        this.books.push(book); // Add the book back to the library
+    }
   }
   
 module.exports = Library;
