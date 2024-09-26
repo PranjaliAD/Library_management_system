@@ -4,7 +4,7 @@ class Library {
     }
   
     addBook(book) {
-      this.books.push(book);
+      this.books.push(book); // Add the book
     }
   
     getAvailableBooks() {
