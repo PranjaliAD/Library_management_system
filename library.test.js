@@ -34,4 +34,17 @@ test('should return a borrowed book to the library', () => {
     expect(library.getAvailableBooks()).toContain(book);
 });
   
+test('should view all available books in the library', () => {
+    const library = new Library();
+    const book1 = new Book('123', 'Clean Code', 'Robert C. Martin', 2008);
+    const book2 = new Book('456', 'The Pragmatic Programmer', 'Andy Hunt', 1999);
+    
+    library.addBook(book1);
+    library.addBook(book2);
+  
+    const availableBooks = library.viewAvailableBooks();
+  
+    expect(availableBooks).toContain(book1);
+    expect(availableBooks).toContain(book2);
+});
   
